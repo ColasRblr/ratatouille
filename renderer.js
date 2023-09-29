@@ -6,7 +6,7 @@ const handleSearch = async (e) => {
     const search = document.getElementById('search').value;
 
     e.preventDefault();
-    if(search != '')  {
+    if (search != '') {
         try {
             const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`, {
                 method: "GET",
@@ -18,19 +18,29 @@ const handleSearch = async (e) => {
             if (!response.ok) {
                 throw new Error(`Erreur HTTP! Statut: ${response.status}`);
             }
-
+            list.innerHTML = "";
             const data = await response.json();
-            console.log(data);
             data.meals.forEach((meal) => {
                 console.log(meal);
-                let mealContainer = document.createElement("div");
-                list.appendChild(mealContainer);
-                mealContainer.innerHTML = meal.strMeal;
-                let image = document.createElement('img');
-                image.src = `${meal.strMealThumb}/preview`;
-                mealContainer.appendChild(image);
-            }
-            )
+                list.innerHTML += `
+                <div id="${meal.idMeal}" class="meal-container" href="detail.html/${meal.idMeal}">
+                    <img src="${meal.strMealThumb}" class="meal-container-image" />
+                    <div class="meal-container-info">
+                        <h2>${meal.strMeal}</h2>
+                        <div>Location : ${meal.strArea}</div>
+                        <div>Category : ${meal.strCategory}</div>
+                    </div>
+                </div>
+                `})
+
+
+            mealCards = document.querySelectorAll('.meal-container');
+            mealCards.forEach((card) => {
+                card.addEventListener("click", () => {
+                    let cardId = card.id
+                    window.open(`detail.html?id=${cardId}`)
+                })
+            })
         } catch (err) {
             console.error(err);
         }
@@ -38,4 +48,3 @@ const handleSearch = async (e) => {
 };
 
 form.addEventListener("submit", handleSearch)
-
