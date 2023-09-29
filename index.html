@@ -7,20 +7,20 @@
   <meta http-equiv="Content-Security-Policy" content="connect-src https://www.themealdb.com" />
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
   <title>Bonjour depuis le rendu d'Electron !</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<form>
-  <input id="search" type="search">
-  <button type="submit"> Chercher </button>
-</form>
-
-<div id="list">
-
-</div>
-<!-- <button id="btn">Clique ici</button> -->
 
 <body>
-  <h1>Bonjour depuis le rendu d'Electron !</h1>
-  <p>👋</p>
+  <nav>
+    <img src="./assets/ratatouille.png" alt="logo" id="logo">
+    <h1>Ratatouille</h1>
+  </nav>
+  <form>
+    <input id="search" type="search" placeholder="Rechercher une recette">
+    <button type="submit"> Miammm </button>
+  </form>
+  <div id="list">
+  </div>
 </body>
 
 <script src="renderer.js"></script>

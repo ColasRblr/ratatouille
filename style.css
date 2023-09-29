@@ -1,4 +1,58 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#logo {
+    height: 100%;
+}
+
+#search {
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #F8DBC0;
+    width: 25%;
+    outline: none;
+}
+
+form {
+    text-align: center;
+}
+
+form button {
+    border: none;
+    background: #F8DBC0;
+    padding: 12px;
+    border-radius: 15px;
+}
+
+#list {
+    margin-top: 50px;
+}
+
+.meal-container {
+    width: 50%;
+    height: 200px;
+    display: flex;
+    margin: 10px auto;
+    background: #f5dcc557;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #cdcdcd;
+    cursor: pointer;
+}
+
+.meal-container-info {
+    margin-left: 20px;
+}
+
+.meal-container-image {
+    height: 100%;
 }
