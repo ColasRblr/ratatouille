@@ -1,58 +1,69 @@
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 nav {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    margin-bottom: 50px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 #logo {
-    height: 100%;
+  height: 100%;
 }
 
 #search {
-    padding: 10px;
-    border-radius: 15px;
-    border: 2px solid #F8DBC0;
-    width: 25%;
-    outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #f8dbc0;
+  width: 25%;
+  outline: none;
 }
 
 form {
-    text-align: center;
+  text-align: center;
 }
 
 form button {
-    border: none;
-    background: #F8DBC0;
-    padding: 12px;
-    border-radius: 15px;
+  border: none;
+  background: #f8dbc0;
+  padding: 12px;
+  border-radius: 15px;
 }
 
 #list {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .meal-container {
-    width: 50%;
-    height: 200px;
-    display: flex;
-    margin: 10px auto;
-    background: #f5dcc557;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 1px #cdcdcd;
-    cursor: pointer;
+  width: 50%;
+  height: 200px;
+  display: flex;
+  margin: 10px auto;
+  background: #f5dcc557;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #cdcdcd;
+  cursor: pointer;
 }
 
 .meal-container-info {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .meal-container-image {
-    height: 100%;
+  height: 100%;
+}
+
+#img-details {
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+}
+
+#ingredients {
+  font-size: 20px;
+  margin-bottom: 5vh;
 }
