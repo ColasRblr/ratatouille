@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+img {
+    width: 400px;
+    display: block;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr;
+  }
+
+  .card__body, .card__footer {
+    margin: 1rem;
+  }
+
+  .tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    background: #56CCF2;
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
+  }
+
+  .card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .card {
+        grid-template-columns: 3fr 3fr; 
+    }
+
+    .card__footer {
+        grid-column: span 2; 
+    }
+}

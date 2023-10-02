@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="connect-src https://www.themealdb.com" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>Ratatouille</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <img src="./assets/ratatouille.png" alt="logo" id="logo">
+    <h1>Ratatouille</h1>
+  </nav>
+  <form>
+    <input id="search" type="search" placeholder="Rechercher une recette">
+    <button type="submit"> Miammm </button>
+  </form>
+  <div id="list">
+  </div>
+</body>
+
+<script src="renderer.js"></script>
+
+</html>
