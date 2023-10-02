@@ -4,6 +4,8 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+     minWidth: 400,   // Définir la largeur minimale
+    // minHeight: 600,  // Définir la hauteur minimale
   });
 
   win.loadFile("index.html");
@@ -15,6 +17,7 @@ app.whenReady().then(() => {
 
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) createWindow();
+  
 });
 
 app.on("window-all-closed", () => {

@@ -29,6 +29,7 @@ const handleSearch = async (e) => {
                         <h2>${meal.strMeal}</h2>
                         <div>Location : ${meal.strArea}</div>
                         <div>Category : ${meal.strCategory}</div>
+                        
                     </div>
                 </div>
                 `})
