@@ -1,7 +1,10 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 let tabIngredient = [];
+const id = params.get("id");
+let tabIngredient = [];
 
+console.log(id);
 console.log(id);
 
 const displayDetails = async (e) => {
@@ -12,7 +15,17 @@ const displayDetails = async (e) => {
         "Content-Type": "application/json",
       },
     });
+  try {
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP! Statut: ${response.status}`);
+    }
     if (!response.ok) {
       throw new Error(`Erreur HTTP! Statut: ${response.status}`);
     }

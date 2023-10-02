@@ -1,36 +1,36 @@
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 nav {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    margin-bottom: 50px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 #logo {
-    height: 100%;
+  height: 100%;
 }
 
 #search {
-    padding: 10px;
-    border-radius: 15px;
-    border: 2px solid #F8DBC0;
-    width: 25%;
-    outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #f8dbc0;
+  width: 25%;
+  outline: none;
 }
 
 form {
-    text-align: center;
+  text-align: center;
 }
 
 form button {
-    border: none;
-    background: #F8DBC0;
-    padding: 12px;
-    border-radius: 15px;
+  border: none;
+  background: #f8dbc0;
+  padding: 12px;
+  border-radius: 15px;
 }
 
 #list {
@@ -59,7 +59,7 @@ form button {
 }
 
 .meal-container-info {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .meal-container-image {
