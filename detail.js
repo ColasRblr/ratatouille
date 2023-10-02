@@ -1,10 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 let tabIngredient = [];
-const id = params.get("id");
-let tabIngredient = [];
 
-console.log(id);
 console.log(id);
 
 const displayDetails = async (e) => {
@@ -15,17 +12,7 @@ const displayDetails = async (e) => {
         "Content-Type": "application/json",
       },
     });
-  try {
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
 
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP! Statut: ${response.status}`);
-    }
     if (!response.ok) {
       throw new Error(`Erreur HTTP! Statut: ${response.status}`);
     }
@@ -39,7 +26,7 @@ const displayDetails = async (e) => {
     let detailsContainer = document.getElementById("details-container");
     detailsContainer.innerHTML = `
 
-    <h2>${data.meals[0].strMeal}</h2>
+    <h4>${data.meals[0].strMeal}</h4>
       <div class="card">
         <div class="card__header">
           <img src="${data.meals[0].strMealThumb}" alt="card__image" class="card__image" />
@@ -60,11 +47,9 @@ const displayDetails = async (e) => {
     for (var key in tabIngredient) {
       var value = tabIngredient[key];
       ingredients.innerHTML += `
-      
-            <li>
-            ${value}
-            </li>
-           
+      <li>
+      ${value}
+      </li>
             `;
     }
     console.log(data.meals);
